@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Michael Seth">
+    <title>Nigeria History Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Google Sans" rel="stylesheet">
+</head>
+
+<body>
+
+    <section class="sec1">
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTYbCNJQUfl4xzwdfgyVff-isMo2F6LzZUeJA&usqp"
+                alt="">
+        </div>
+        <div>
+            <h3>Nigeria History Quiz</h3>
+            <p class="quote">"There is no Nigerian that is more Nigerian than any Nigerian."</p>
+            <p>Let's check your knowledge about Nigeria by taking this Quiz Test.</p>
+            <button class="btn btn1 continue-btn">Continue</button>
+        </div>
+    </section>
+    <!-- Michael Seth -->
+    <section class="sec2">
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQwmqylT3hlUqqVnku_VbEJzd_x4aur7IvOHg&usqp=CAU"
+                alt="">
+        </div>
+        <p>Welcome to the Nigeria History Quiz! Please select your answer and click submit </p>
+        <div>
+            <input type="text" class="input" placeholder="Enter Your Name">
+        </div>
+        <button class="btn btn1 start-quiz">Start Quiz</button>
+    </section>
+
+    <section class="sec3">
+        <div class="box">
+            <div class="box__header">
+                <div class="index">1/10</div>
+                <div class="toast"></div>
+                <div class="time">00:01</div>
+            </div>
+            <h3 class="question"></h3>
+            <ul class="quiz">
+            </ul>
+            <button class="submit">Continue</button>
+        </div>
+    </section>
+    <!-- Michael Seth -->
+    <section class="sec4">
+        <div class="des">
+            <h3 class="mb-1 name">Michael Seth</h3>
+            <p class="mb-1">Congratulation you did a great job!🎉🎉 <br> you have unlocked a new certificate </p>
+
+        </div>
+        <button class="check-ans btn">Check Your Answers</button>
+        <h3> Your Certificate</h3>
+        <div class="certificate">
+            <h4>Web development Quiz</h4>
+            <p id="name">Michael Seth</p>
+            <p id="score">Score: 50%</p>
+            <small id="id">Test Id : 737373</small>
+            <small id="date">7-5-2020</small>
+            <small class="sin">Michael</small>
+        </div>
+        <h1 class="great">Excellent</h1>
+        <!-- Michael Seth -->
+    </section>
+    <section class="sec5">
+        <div class="flex">
+            <h2>Your Answers</h2>
+            <h2 class="sc"></h2>
+        </div>
+        <p class="mb-1">If your answer is wrong then we cannot show the correct answer. Your information is anonymous to
+            even me.. 🤣 🤣 🤣 </p>
+        <ul class="ans-list">
+        </ul>
+        <button class="btn back-btn">Back</button>
+    </section>
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <script>
+        //Do not see the answer
+        const ques = [{
+            que: "Who designed the flag of Nigeria",
+            option: ["Taiye Taiwo", "Taiwo Akinkunmi", "Taiwo Olushola", "Taiwo and Kehinde"],
+            crt: 1
+        }, {
+            que: "Who was the first President of Nigeria",
+            option: ["Tafawa Balewa", "Obafemi Awolowo", "Nnamdi Azikiwe",
+                "Herbert Macauley"
+            ],
+            crt: 2
+        }, {
+            que: "Which of the Leaders was assasinated in his car on the 13th of Feb 1976",
+            option: ["Gen. Yakubu Gowon", "Gen. Murtala Mohammed",
+                "Col. Emeka Ojukwu", "Gen. Ibrahim Badamasi Babangida"
+            ],
+            crt: 1
+        }, {
+            que: "When was Crude Oil discovered in Nigeria",
+            option: ["1965", "1956", "1971", "1967"],
+            crt: 1
+        }, {
+            que: "When was 1 naira equal to 1 dollar",
+            option: ["Sani Abacha 1993", "Mohammed Buhari 1984", "Yakubu Gowon 1973", "Shehu Shagari 1979"],
+            crt: 0
+        }, {
+            que: "What was Nigeria's major source of income before the discovery of Crude oil",
+            option: ["Slave Trade", "Agriculture",
+                "Loaning", "Gold Mining"
+            ],
+            crt: 1
+        }, {
+            que: "Who is the man in 2 Naira coin",
+            option: ["Muritala Mohammed", "Herbert Macaulay", "National Assembly", "Corn and Maize"],
+            crt: 2
+        }, {
+            que: "Where was the first capital of Nigeria?",
+            option: ["Port Harcourt", "Lagos", "Calabar",
+                "Abuja"
+            ],
+            crt: 0
+        }, {
+            que: "Who overthrown Buhari in a Palace Coup",
+            option: ["Gen. Godwin Obaseki", "Defence Minister Sani Abacha", "Lt-Gen. Olusegun Obasanjo",
+                "Gen. Ibrahim Badamasi Babangida"
+            ],
+            crt: 3
+        }, {
+            que: "Who stopped the killing of twins in Nigeria",
+            option: ["Martha Selina", "Mitchell Slessor", "Buffy Slayer", "Mary Stella"],
+            crt: 1
+        }, {
+            que: "What do the horse represent in the Nigerian Coat of arm?",
+            option: ["Dignity", "Strenght", "Peace",
+                "Unity"
+            ],
+            crt: 0
+        }, {
+            que: "What year did Nigeria became a republic",
+            option: ["1960", "1959", "1963", "1969"],
+            crt: 2
+        }, {
+            que: "How many ethnic groups are in Nigeria",
+            option: ["150", "200", "250", "50"],
+            crt: 2
+        }, {
+            que: "Who was the first man to drive a car in Nigeria",
+            option: ["Williams Thomas", "Thomas Jones", "Thompson Olukoya", "Bode Thompson"],
+            crt: 1
+        }, {
+            que: "Who scored the winnong goal for Nigeria in the Match Nigeria vs India 99 - 1",
+            option: ["Thunder Balogun", "Sam Okwaraji", "Victor Moses", "None of the Above"],
+            crt: 3
+        }];
+        let score = 0,
+            index = 0,
+            name = "",
+            answer = [],
+            times;
+
+
+        $(document).ready(function () {
+            $(".continue-btn").click(function () {
+                $(".sec1").fadeOut();
+                $(".sec2").fadeIn();
+            });
+            $(".start-quiz").click(function () {
+                name = $(".input").val();
+                if (name === '') {
+                    alert("Please Enter Your Name")
+                    return;
+                }
+                $(".sec2").fadeOut();
+                $(".sec3").fadeIn();
+                newQuestion()
+                startTimes()
+            });
+            $(".quiz").on("click", "li", function () {
+                $(".quiz .select").removeClass("select");
+                $(this).addClass("select");
+            })
+            $(".submit").click(function () {
+                const select = $(".quiz li").hasClass("select");
+                if (!select) {
+                    alert("please select any option");
+                    return;
+                }
+                const key = $(".quiz .select").attr("data-key");
+                checkAns(key)
+            })
+            $(".check-ans").click(function () {
+                $(".sec4").fadeOut();
+                $(".sec5").fadeIn();
+                showYourAns()
+            });
+            $(".back-btn").click(function () {
+                $(".sec5").fadeOut();
+                $(".sec4").fadeIn();
+            });
+
+        });
+
+        let s = 0,
+            m = "0" + 0;
+
+        function showTime() {
+            s++
+            if (s >= 60) {
+                s = 0;
+                m++
+                m = m < 10 ? "0" + m : m;
+            }
+            s = s < 10 ? "0" + s : s;
+            $(".time").text(m + ":" + s);
+        }
+
+        function startTimes() {
+            times = setInterval(showTime, 1000)
+        }
+
+        function newQuestion() {
+            const que = ques[index];
+            showIndex()
+            $(".question").text(que.que);
+            $(".quiz").html("");
+            que.option.forEach((q, i) => {
+                const li = document.createElement('li');
+                li.setAttribute('data-key', i);
+                li.textContent = q;
+                $(".quiz").append(li)
+            })
+        }
+
+        function checkAns(key) {
+            const que = ques[index];
+            answer.push(key);
+            if (que.crt == key) {
+                score++;
+                makeToast("Right")
+            } else {
+                makeToast("Wrong")
+            }
+            index++;
+            if (index < ques.length) {
+                newQuestion()
+            } else {
+                showResult()
+                clearInterval(times)
+            }
+        }
+
+        function showIndex() {
+            $(".index").text(1 + index + "/" + ques.length)
+        }
+
+        function showResult() {
+            $(".sec3").fadeOut();
+            $(".sec4").fadeIn();
+            $("#name").text(name);
+            $(".name").text(name);
+            const scores = Math.round(score / ques.length * 100);
+            const grt = scores < 25 ? "Nice" : scores < 50 ? "Good" : scores < 76 ? "Very Good" : "Excellent";
+            $("#score").text("Score : " + scores + "%");
+            $("#id").text("Test Id : " + Math.ceil(Math.random() * 20000));
+            let date = new Date();
+            let today = String(date.getDate()).padStart(2, '0') + '/' + String(date.getMonth() + 1).padStart(2, '0') +
+                '/' + date.getFullYear();
+            $("#date").text(today);
+            $(".great").text(grt);
+        }
+
+
+        function showYourAns() {
+            $(".ans-list").html("");
+            $(".sc").text(score + "/" + ques.length)
+            ques.forEach((que, i) => {
+                const li = document.createElement('li');
+                const p = document.createElement('p');
+                const span = document.createElement('span');
+                p.textContent = 1 + i + " : " + que.que;
+                const chrt = que.crt == answer[i] ? '👉' : '❌';
+                span.textContent = chrt + " " + que.option[answer[i]];
+                const cls = que.crt == answer[i] ? 'green' : 'red';
+                span.classList.add(cls);
+                li.appendChild(p)
+                li.appendChild(span)
+                $(".ans-list").append(li);
+            })
+        }
+
+        function makeToast(txt) {
+            $(".toast").text(txt);
+            $(".toast").fadeIn();
+            setTimeout(() => $(".toast").fadeOut(), 1000)
+        }
+    </script>
+</body>
+
+</html>
